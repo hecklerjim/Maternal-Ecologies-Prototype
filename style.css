@@ -1,0 +1,140 @@
+:root {
+  --dark-color: #21224A;
+  --grey-color: #3e3e50;
+  --light-color: #F0FAFA;
+  --light-color2:rgb(213, 224, 224);
+  --accent-color: #993333;
+}
+
+html {
+  background-color: var(--light-color);
+}
+
+a {
+  color: var(--dark-color);
+}
+
+a:hover, a:active {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', 'Open Sans', "Avenir", Arial, Helvetica, sans-serif;
+  color: var(--dark-color);
+}
+
+h2 {
+  font-family: 'Open Sans', "Avenir", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--dark-color);
+}
+
+h6 {
+  font-family: 'Open Sans', "Avenir", Arial, Helvetica, sans-serif;
+  color: var(--dark-color);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+p {
+  font-family: 'Open Sans', "Avenir", Arial, Helvetica, sans-serif;
+  color: var(--dark-color);
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.section {
+  padding: 2% 10%;
+  background-color: var(--light-color);
+}
+
+.landing-page-title-container {
+  text-align: left;
+  margin-top: 0%;
+}
+
+.fixed-bottom-contact-container {
+  position: fixed;
+  bottom: 0px;
+  background-color: var(--light-color);
+}
+
+.fixed-bottom-contact {
+  position: relative;
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* NAV BLOCK */
+.navbar-container {
+  text-align: center;
+}
+
+.nav-block {
+  padding: 20px;
+}
+
+.nav-block:hover {
+  background-color: var(--light-color2);
+}
+
+.nav-block:hover p, .nav-block:hover h6 {
+  color: var(--accent-color);
+}
+
+.nav-line {
+  font-size: 5rem;
+}
+
+@media (min-width:1200px) {
+  .section {
+    padding: 2% 20%;
+  }
+}
+
+@media (min-width:800px) {
+  .nav-block {
+    display: inline-block;
+    border-style: none;
+  }
+
+  /* .landing-page-title-container {
+    text-align: right;
+    margin-top: 30vh;
+  } */
+
+  .hide-mobile {
+    display: inline-block !important;
+  }
+
+  .show-mobile {
+    display: none !important;
+  }
+}
+
+.hide-mobile {
+  display: none;
+}
+
+.show-mobile {
+  display: block;
+}
+
+@media (max-height: 700px) {
+  .fixed-bottom-contact-container {
+    position: relative;
+  }
+}
+
+@media (min-height: 700px) {
+  .landing-page-title-container {
+    text-align: right;
+    margin-top: 30vh;
+  }
+}
