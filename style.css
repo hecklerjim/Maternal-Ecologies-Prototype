@@ -135,6 +135,6 @@ p {
 @media (min-height: 700px) {
   .landing-page-title-container {
     text-align: right;
-    margin-top: 30vh;
+    margin-top: 20vh;
   }
 }
