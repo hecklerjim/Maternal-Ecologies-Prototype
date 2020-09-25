@@ -6,12 +6,46 @@
   --accent-color: #993333;
 }
 
+/*** Works on common browsers ***/
+::selection {
+  background-color: var(--grey-color);
+  color: var(--light-color);
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+  background-color: var(--grey-color);
+  color: var(--light-color);
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+  background-color: var(--grey-color);
+  color: var(--light-color);
+}
+
+::-ms-selection {
+  background-color: var(--grey-color);
+  color: var(--light-color);
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+  background-color: var(--grey-color);
+  color: var(--light-color);
+}
+
+body {
+  background-color: var(--light-color);
+}
 html {
   background-color: var(--light-color);
+  transition: 0.6s;
 }
 
 a {
   color: var(--dark-color);
+  transition: 0.6s;
 }
 
 a:hover, a:active {
@@ -33,6 +67,12 @@ h2 {
   color: var(--dark-color);
 }
 
+h3 {
+  font-family: 'Open Sans', "Avenir", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: var(--dark-color);
+}
+
 h6 {
   font-family: 'Open Sans', "Avenir", Arial, Helvetica, sans-serif;
   color: var(--dark-color);
@@ -49,7 +89,6 @@ p {
 
 .section {
   padding: 2% 10%;
-  background-color: var(--light-color);
 }
 
 .landing-page-title-container {
@@ -58,8 +97,12 @@ p {
 }
 
 .fixed-bottom-contact-container {
-  position: fixed;
-  bottom: 0px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
   background-color: var(--light-color);
 }
 
@@ -106,7 +149,7 @@ p {
 
   /* .landing-page-title-container {
     text-align: right;
-    margin-top: 20vh;
+    margin-top: 30vh;
   } */
 
   .hide-mobile {
@@ -137,4 +180,58 @@ p {
     text-align: right;
     margin-top: 20vh;
   }
+}
+
+/* WEEKS SECTION */
+
+.weeks-pg-header {
+  position: relative;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
+}
+
+.item {
+  text-align: center;
+}
+
+/* WEEK NAV BAR */
+
+.week-nav {
+  transition: 0.3s;
+}
+
+.active-week:hover, .active-week:active {
+  background-color: #21224A;
+}
+
+.active-week {
+  background-color: var(--light-color2);
+  border-radius: 3px;
+  padding: 1px 3px;
+}
+
+.go-home-btn {
+  position: relative;
+  background-color: var(--light-color2);
+  right: 5px;
+  top: 5px;
+}
+
+.nav-link, .footer p {
+  text-transform: uppercase;
+  font-weight: 200;
+  transition: 0.6s;
+  font-size: 0.8rem;
+}
+.footer p, .footer a {
+  color: rgba(0,0,0,.5);
+}
+.nav-link:hover, .nav-link:active, .footer a:hover, .footer a:active {
+  color: var(--accent-color) !important;
 }
